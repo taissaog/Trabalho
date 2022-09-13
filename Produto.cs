@@ -4,10 +4,18 @@ namespace POO.Programa{
 
     public class Produto{
         //private Produto produtos;
-        private int Codigo;
+        private int Codigo = "";
         private string Marca = "";
         private string Descricao = "";
         private double Preco = "";
+
+        public Produto(){
+            ultimoCodigo++;
+            this.Codigo = ultimoCodigo;
+            this.Marca = Marca;
+            this.Descricao = Descricao;
+            this.Preco = Preco;
+        }
 
         public Produto(int Condigo, string Marca, string Descricao, double Preco){
   
@@ -45,6 +53,19 @@ namespace POO.Programa{
             this.Marca = Marca;
         }
 
+        public static void SolicitandoDados(){
+            Console.WriteLine("---Dados do Produto---");
+            Console.WriteLine("Digite o código do produto: ");
+            Codigo = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a marca do produto: ");
+            Marca = string(ReadLine());
+            Console.WriteLine("Digite a descrição do produto: ");
+            Descricao = string(ReadLine());
+            Console.WriteLine("Digite o preço do produto: ");
+            Preco = double.Parse(ReadLine());
+        }
+
+        
 
     }
-}
+}.
